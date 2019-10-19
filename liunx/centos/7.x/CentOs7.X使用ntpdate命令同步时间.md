@@ -15,4 +15,5 @@ ntp.api.bz ntp (上海服务器)  也是可以通过这个同步
 
  2. 可以做一个crontab定时任务
      >  $ crontab -e
+     
      >  $ 0 5 * * *  /usr/sbin/ntpdate  -u ntp1.aliyun.com    #5点时间同步
