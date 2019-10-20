@@ -1,4 +1,3 @@
-# Centos7.X通过rpm包安装Docker
 @[TOC]目录
 
 ## 前言
