@@ -9,9 +9,13 @@
 > -w：按照后面的格式输出
 
 > time_namelookup：DNS 解析域名[www.taobao.com]的时间
+
 > time_commect：client和server端建立TCP 连接的时间
+
 > time_starttransfer：从client发出请求；到web的server 响应第一个字节的时间
+
 > time_total：client发出请求；到web的server发送会所有的相应数据的时间
+
 > speed_download：下周速度 单位 byte/s
 
 #### 2、curl 测试网关代理某些服务比如GET加上 特有 querystring 比如 json={xxx}
