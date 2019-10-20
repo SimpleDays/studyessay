@@ -1,6 +1,6 @@
-@[TOC]目录
+[TOC]目录
 
-## 前言
+### 前言
 Docker已经火了很多年，现在各大公司都会使用它。那么在我们日常开发中也经常使用，比如我就通过Docker方便快捷在本地安装很多基础服务（Redis、Nginx、Mongodb、RabbitMQ、K8s）等方便学习和使用。今天记录下如何通过rpm在centos7.x系统里面安装Docker。
 
 ### 1、Docker官网下载rpm包
