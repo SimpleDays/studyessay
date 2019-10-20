@@ -9,5 +9,6 @@
 * 3、重启 docker 服务： `sudo service docker restart`
 * 4、切换当前会话到新 group 或者重启 X 会话 : `sudo newgrp - docker OR pkill X`
 
-> 注意，最后一步是必须的，否则因为 groups 命令获取到的是缓存的组信息，刚添加的组信息未能生效，所以 docker images 执行时同样有错。<br/>
+### 注意
+> 最后一步是必须的，否则因为 groups 命令获取到的是缓存的组信息，刚添加的组信息未能生效，所以 docker images 执行时同样有错。<br/>
 > 如果上面操作本地还不能访问，那么我们就注销下自己账户重新登录即可。
