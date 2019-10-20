@@ -18,4 +18,5 @@ Docker已经火了很多年，现在各大公司都会使用它。那么在我�
 * 建个 symlink: `ln -s /home/mnt/docker /var/lib/docker`
 * 启动 `systemctl start docker`
   
- 好了至此我们的Docker算是安装完毕了，可以通过官网文档说的（https://docs.docker.com/install/linux/docker-ce/centos/）sudo docker run hello-world 测试下 。
+ 好了至此我们的Docker算是安装完毕了，可以通过官网文档说的（https://docs.docker.com/install/linux/docker-ce/centos/）测试下
+ `sudo docker run hello-world` 
