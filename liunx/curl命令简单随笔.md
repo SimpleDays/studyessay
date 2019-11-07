@@ -1,6 +1,6 @@
 # curl命令学习
 在此之前只会简单使用下curl，最近因公司项目需求对curl做了一些更多的了解。
-参考了阮一峰大佬2篇文章：[curl网站开发指南](http://www.ruanyifeng.com/blog/2011/09/curl.html) 和 [curl 的用法指南](http://www.ruanyifeng.com/blog/2019/09/curl-reference.html)
+参考了阮一峰大佬两篇文章：[curl网站开发指南](http://www.ruanyifeng.com/blog/2011/09/curl.html) 和 [curl 的用法指南](http://www.ruanyifeng.com/blog/2019/09/curl-reference.html)
 因此重新调整下。
 
 ## 入门
