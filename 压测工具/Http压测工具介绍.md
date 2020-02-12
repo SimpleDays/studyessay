@@ -40,26 +40,26 @@ end
 ```
 
 #### 命令解释
-> -c, --connections: total number of HTTP connections to keep open with each thread handling N = connections/threads
-> 总的http并发数,要保持打开状态的HTTP连接总数每个线程处理N=连接/线程。
+> -c, --connections: total number of HTTP connections to keep open with each thread handling N = connections/threads <br />
+> 总的http并发数,要保持打开状态的HTTP连接总数每个线程处理N=连接/线程。<br />
 >一般线程数不宜过多. 核数的2到4倍足够了. 多了反而因为线程切换过多造成效率降低. 因为 wrk 不是使用每个连接一个线程的模型, 而是通过异步网络 io 提升并发量. 所以网络通信不会阻塞线程执行. 这也是 wrk 可以用很少的线程模拟大量网路连接的原因. 而现在很多性能工具并没有采用这种方式, 而是采用提高线程数来实现高并发. 所以并发量一旦设的很高, 测试机自身压力就很大. 测试效果反而下降.
 
-> -d, --duration:    duration of the test, e.g. 2s, 2m, 2h
-> 持续压测时间, 比如: 2s, 2m, 2h
+> -d, --duration:    duration of the test, e.g. 2s, 2m, 2h <br />
+> 持续压测时间, 比如: 2s, 2m, 2h 
 
-> -t, --threads:     total number of threads to use
+> -t, --threads:     total number of threads to use <br />
 > 使用的总线程数
 
-> -s, --script:      LuaJIT script, see SCRIPTING
-> LuaJIT脚本
-> 一些说明可以参考地址 ： https://github.com/wg/wrk/blob/master/SCRIPTING
-> 参考示例：https://github.com/wg/wrk/tree/master/scripts
+> -s, --script:      LuaJIT script, see SCRIPTING <br />
+> LuaJIT脚本 <br />
+> 一些说明可以参考地址 ： https://github.com/wg/wrk/blob/master/SCRIPTING <br />
+> 参考示例：https://github.com/wg/wrk/tree/master/scripts <br />
 
-> -H, --header:      HTTP header to add to request, e.g. "User-Agent: wrk"
-> 添加http header, 比如. "User-Agent: wrk"
->    --latency:     print detailed latency statistics
-> 在控制台打印出延迟统计情况
->    --timeout:     record a timeout if a response is not received within this amount of time. 
+> -H, --header:      HTTP header to add to request, e.g. "User-Agent: wrk" <br />
+> 添加http header, 比如. "User-Agent: wrk" <br />
+>    --latency:     print detailed latency statistics <br />
+> 在控制台打印出延迟统计情况 <br />
+>    --timeout:     record a timeout if a response is not received within this amount of time. <br />
 > http超时时间
 
 #### 返回结果参数解释
@@ -81,23 +81,23 @@ Requests/sec:   1453.37
 Transfer/sec:     21.80MB
 ```
 
-> ``` 12 threads and 100 connections: ```
+> ``` 12 threads and 100 connections: ``` <br/>
 > 总共是12个线程,100个连接(不是一个线程对应一个连接)
 
-> ``` latency和Req/Sec: ```
+> ``` latency和Req/Sec: ``` <br />
 > 代表单个线程的统计数据,latency代表延迟时间,Req/Sec代表单个线程每秒完成的请求数，他们都具有平均值, 标准偏差, 最大值, 正负一个标准差占比。一般我们来说我们主要关注平均值和最大值. 标准差如果太大说明样本本身离散程度比较高. 有可能系统性能波动很大.
 
-> ``` 14577 requests in 10.03s, 218.66MB read ```
+> ``` 14577 requests in 10.03s, 218.66MB read ``` <br />
 > 在10秒内总共请求了14577次，总共读取218.66MB的数据
 
-> ```  Socket errors: connect 0, read 74, write 0, timeout 32 ```
+> ```  Socket errors: connect 0, read 74, write 0, timeout 32 ``` <br />
 > 总共有74个读错误，32个超时。
 
-> ``` Requests/sec和Transfer/sec ```
+> ``` Requests/sec和Transfer/sec ``` <br />
 > 所有线程平均每秒钟完成了1453.37个请求,每秒钟读取21.80MB数据量
 
-> ``` Latency Distribution ```
-> 响应时间的分布
+> ``` Latency Distribution ``` <br />
+> 响应时间的分布 <br />
 > 上述请求代表，50%请求在32.02ms内完成，90%在269.98ms内完成
 
 
