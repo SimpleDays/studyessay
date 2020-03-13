@@ -12,7 +12,7 @@ categories: studyessay
 > wrk 的一个很好的特性就是能用很少的线程压出很大的并发量. 原因是它使用了一些操作系统特定的高性能 io 机制, 比如 select, epoll, kqueue 等. 其实它是复用了 redis 的 ae 异步事件驱动框架. 确切的说 ae 事件驱动框架并不是 redis 发明的, 它来至于 Tcl的解释器 jim, 这个小巧高效的框架, 因为被 redis 采用而更多的被大家所熟知.
 
 ## 安装方式
-### CentOs
+## CentOs
 安装wrk前需要的一些依赖组件
   ``` 
   # sudo yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel asciidoc 
@@ -36,13 +36,13 @@ git clone https://github.com/wg/wrk.git
 # yum -y install xmlto 
 ```
 
-#### 创建软链到指定目录
+创建软链到指定目录
 ``` 
 # ln -s /home/user/tools/wrk/wrk /usr/local/bin
 ```
 通过执行“wrk ”来确认是否安装成功
 
-#### wrk简单的使用
+## wrk简单的使用
 1、对于简答不带Querystring的url可以直接通过如下命令压测
 ```
 # wrk -t12 -c2000 -d1m -T10s --latency https://www.baidu.com
@@ -58,7 +58,7 @@ request = function ()
 end 
 ```
 
-#### 命令解释
+## 命令解释
 > -c, --connections: total number of HTTP connections to keep open with each thread handling N = connections/threads <br />
 > 总的http并发数,要保持打开状态的HTTP连接总数每个线程处理N=连接/线程。<br />
 >一般线程数不宜过多. 核数的2到4倍足够了. 多了反而因为线程切换过多造成效率降低. 因为 wrk 不是使用每个连接一个线程的模型, 而是通过异步网络 io 提升并发量. 所以网络通信不会阻塞线程执行. 这也是 wrk 可以用很少的线程模拟大量网路连接的原因. 而现在很多性能工具并没有采用这种方式, 而是采用提高线程数来实现高并发. 所以并发量一旦设的很高, 测试机自身压力就很大. 测试效果反而下降.
@@ -81,7 +81,7 @@ end
 >    --timeout:     record a timeout if a response is not received within this amount of time. <br />
 > http超时时间
 
-#### 返回结果参数解释
+## 返回结果参数解释
 ```
 [root@sy-suz-srv51 ~]# wrk -t12 -c100 -d10s -T1s --latency  https://www.baidu.com
 Running 10s test @ https://www.baidu.com
