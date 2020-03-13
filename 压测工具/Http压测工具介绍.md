@@ -13,22 +13,34 @@ categories: studyessay
 
 ## 安装方式
 ### CentOs
-####  安装wrk前需要的一些依赖组件
-  ``` # yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel asciidoc ```
+安装wrk前需要的一些依赖组件
+  ``` 
+  # sudo yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel asciidoc 
+ 
+  # sudo yum install gcc perl-ExtUtils-MakeMaker 
+  ```
 
-  ``` # yum install gcc perl-ExtUtils-MakeMaker ```
+下载wrk源码包，可以考虑直接通过git拉取下来
+```  
+git clone https://github.com/wg/wrk.git 
+```
 
-#### 下载wrk源码包，可以考虑直接通过git拉取下来
-   ```  git clone https://github.com/wg/wrk.git ```
+编译wrk文件
+``` 
+# cd wrk
 
-#### 编译wrk文件
-  ``` cd wrk ```
-  ``` make ```
-   若出现错误：xmlto: command not found，可以尝试重新安装xmlto：``` # yum -y install xmlto ```
+# make 
+```
+若出现错误：xmlto: command not found，可以尝试重新安装xmlto：
+```
+# yum -y install xmlto 
+```
 
 #### 创建软链到指定目录
-   ``` # ln -s /home/user/tools/wrk/wrk /usr/local/bin ```
-   通过 ``` # wrk ``` 来确认是否安装成功
+``` 
+# ln -s /home/user/tools/wrk/wrk /usr/local/bin
+```
+通过执行“wrk ”来确认是否安装成功
 
 #### wrk简单的使用
 1、对于简答不带Querystring的url可以直接通过如下命令压测
@@ -88,24 +100,17 @@ Requests/sec:   1453.37
 Transfer/sec:     21.80MB
 ```
 
-> ``` 12 threads and 100 connections: ``` <br/>
-> 总共是12个线程,100个连接(不是一个线程对应一个连接)
+> 12 threads and 100 connections: 总共是12个线程,100个连接(不是一个线程对应一个连接)
 
-> ``` latency和Req/Sec: ``` <br />
-> 代表单个线程的统计数据,latency代表延迟时间,Req/Sec代表单个线程每秒完成的请求数，他们都具有平均值, 标准偏差, 最大值, 正负一个标准差占比。一般我们来说我们主要关注平均值和最大值. 标准差如果太大说明样本本身离散程度比较高. 有可能系统性能波动很大.
+> latency和Req/Sec ：代表单个线程的统计数据,latency代表延迟时间,Req/Sec代表单个线程每秒完成的请求数，他们都具有平均值, 标准偏差, 最大值, 正负一个标准差占比。一般我们来说我们主要关注平均值和最大值. 标准差如果太大说明样本本身离散程度比较高. 有可能系统性能波动很大.
 
-> ``` 14577 requests in 10.03s, 218.66MB read ``` <br />
-> 在10秒内总共请求了14577次，总共读取218.66MB的数据
+> 14577 requests in 10.03s, 218.66MB read ：在10秒内总共请求了14577次，总共读取218.66MB的数据
 
-> ```  Socket errors: connect 0, read 74, write 0, timeout 32 ``` <br />
-> 总共有74个读错误，32个超时。
+> Socket errors: connect 0, read 74, write 0, timeout 32 ：总共有74个读错误，32个超时。
 
-> ``` Requests/sec和Transfer/sec ``` <br />
-> 所有线程平均每秒钟完成了1453.37个请求,每秒钟读取21.80MB数据量
+> Requests/sec和Transfer/sec ：所有线程平均每秒钟完成了1453.37个请求,每秒钟读取21.80MB数据量
 
-> ``` Latency Distribution ``` <br />
-> 响应时间的分布 <br />
-> 上述请求代表，50%请求在32.02ms内完成，90%在269.98ms内完成
+> Latency Distribution ：响应时间的分布，上述请求代表，50%请求在32.02ms内完成，90%在269.98ms内完成
 
 
 
