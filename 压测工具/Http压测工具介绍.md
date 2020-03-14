@@ -10,7 +10,7 @@ categories: studyessay
 ## wrk
 地址：https://github.com/wg/wrk
 > wrk 的一个很好的特性就是能用很少的线程压出很大的并发量. 原因是它使用了一些操作系统特定的高性能 io 机制, 比如 select, epoll, kqueue 等. 其实它是复用了 redis 的 ae 异步事件驱动框架. 确切的说 ae 事件驱动框架并不是 redis 发明的, 它来至于 Tcl的解释器 jim, 这个小巧高效的框架, 因为被 redis 采用而更多的被大家所熟知.
-
+<!-- more -->
 ## 安装方式
 ## CentOs
 安装wrk前需要的一些依赖组件
