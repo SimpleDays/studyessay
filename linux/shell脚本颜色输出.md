@@ -81,7 +81,7 @@ echo可以控制字体颜色和背景颜色输出。
 [dongliang@izbp1ibd5qj8a3gjpbcfqhz ~]$ echo -e "\e[1;31m something \e[0m"
 ```
 
-![图一](/images/shell-1.png)
+![图一](./images/shell-1.png)
 
 **说明：**  
 
@@ -103,7 +103,7 @@ echo可以控制字体颜色和背景颜色输出。
 [dongliang@izbp1ibd5qj8a3gjpbcfqhz ~]$ echo -e "\e[1;5;4;42;31m something \e[0;0;0m"
 ```
 
-![图二](/images/shell-2.png)
+![图二](./images/shell-2.png)
 
 ### 结论
 
