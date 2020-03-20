@@ -73,7 +73,7 @@ unix  3      [ ]         STREAM     CONNECTED     124601653 @/containerd-shim/mo
 
 如图：
 
-![](https://github.com/SimpleDays/studyessay/blob/master/liunx/tcp-ws.jpg)
+![](https://github.com/SimpleDays/studyessay/blob/master/liunx/images/tcp-ws.jpg)
 
 > **SYN**：(同步序列编号,Synchronize Sequence Numbers)该标志仅在三次握手建立TCP连接时有效。表示一个新的TCP连接请求。<br/>
 
