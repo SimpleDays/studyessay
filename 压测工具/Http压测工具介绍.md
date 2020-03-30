@@ -72,7 +72,7 @@ wrk -t12 -c2000 -d1m -T10s --latency -s /root/testlua/test.lua http://10.1.62.91
 
 #test.lua
 request = function ()
-  return wrk.format("GET","/sz/Member/MaxMemberInfoRequest?accesstoken=6f8cbe0a4b2743d2&   customerguid=60570d08-5dc9-4603-973a-a73440cd910a&sourcetype=9&MaxMemberVersion=1")
+  return wrk.format("GET","/sz/Member/MaxMemberInfoRequest?accesstoken=6f8cbe0a4b2743d2&customerguid=60570d08-5dc9-4603-973a-a73440cd910a&sourcetype=9&MaxMemberVersion=1")
 end  
 
 ```
