@@ -72,3 +72,5 @@ Set-Theme Agnoster
 
 下面展示下美化后的样子：  
 ![图一](./images/myPowerShell.png)
+
+参考、转载至：<https://www.toutiao.com/i6809530217959260680/?tt_from=mobile_qq&utm_campaign=client_share&timestamp=1585626978&app=news_article&utm_source=mobile_qq&utm_medium=toutiao_android&req_id=202003311156180101290351331C05AB31&group_id=6809530217959260680>
