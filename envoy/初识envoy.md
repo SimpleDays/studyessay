@@ -273,6 +273,8 @@ clusters:
 
 具体代码可以参考： [Envoy代理demo](https://github.com/SimpleDays/studyessay/tree/master/envoy/demo/proxy-demo)  
 
+> [线程模型的介绍](https://blog.envoyproxy.io/envoy-threading-model-a8d44b922310)  
+
 ### 相关Envoy资料
 
 - [Envoy官网文档](https://www.envoyproxy.io/docs/envoy/latest/)  
