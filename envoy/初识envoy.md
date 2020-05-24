@@ -271,4 +271,28 @@ clusters:
 
 配置集群信息，集群名字与监听配置上路由里面指定集群名称一致，当请求近来时候匹配上路由之后，进行主机跳转并通过寻找集群信息访问配置上的"socket_address"下的地址访问，然后成功跳转到百度。  
 
-具体代码可以参考： [Envoy代理demo](https://github.com/SimpleDays/studyessay/tree/master/envoy/demo/proxy-demo)
+具体代码可以参考： [Envoy代理demo](https://github.com/SimpleDays/studyessay/tree/master/envoy/demo/proxy-demo)  
+
+### 相关Envoy资料
+
+- [Envoy官网文档](https://www.envoyproxy.io/docs/envoy/latest/)  
+
+- [Envoy的Github社区](https://github.com/envoyproxy)  
+
+- [Envoy的Medium博客](https://blog.envoyproxy.io/)  
+
+- [Envoy的官方推特博客](https://twitter.com/EnvoyProxy)  
+
+- [Matt Klein的Meduim博客](https://medium.com/@mattklein123)  
+
+- [Matt Klein的特推博客](https://twitter.com/mattklein123)  
+
+- [Matt Klein的个人博客](https://mattklein123.dev/)  
+
+- [Envoy的中文文档](https://www.servicemesher.com/envoy/)  
+
+- [ServiceMesher社区](https://www.servicemesher.com/)  
+
+- [ServiceMesher的B站直播（经常办一些线上的服务网格、云原生技术分享）](https://live.bilibili.com/21954520)  
+
+- [本人比较喜欢的一篇关于Service Mesh 发展趋势(续)：棋到中盘路往何方 | Service Mesh Meetup 实录](https://mp.weixin.qq.com/s?__biz=MzIwNDIzODExOA==&mid=2650167335&idx=1&sn=3d57c055b75ad252c0892c554e7a632f&chksm=8ec1c46eb9b64d780e8ef57ba23bd06f6a5acaee09f9f3fe32c00587596a2cac15e365199583&mpshare=1&scene=23&srcid=&sharer_sharetime=1568176218617&sharer_shareid=b9e95083c0081f1a530ee42051f5386)
