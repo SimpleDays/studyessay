@@ -210,6 +210,8 @@ Envoy的线程模型旨在支持编程的简单性和大规模并行性，但如
 - https://github.com/lyft/envoy/blob/master/include/envoy/upstream/cluster_manager.h
 - https://github.com/lyft/envoy/blob/master/source/common/upstream/cluster_manager_impl.h
 
+> [线程模型的介绍](https://blog.envoyproxy.io/envoy-threading-model-a8d44b922310) 
+
 ### 上手试连，通过Envoy实现一个百度简单代理
 
 通过Envoy去做一个简单的代理访问百度，话不多说配置伺候:  
@@ -272,8 +274,7 @@ clusters:
 配置集群信息，集群名字与监听配置上路由里面指定集群名称一致，当请求近来时候匹配上路由之后，进行主机跳转并通过寻找集群信息访问配置上的"socket_address"下的地址访问，然后成功跳转到百度。  
 
 具体代码可以参考： [Envoy代理demo](https://github.com/SimpleDays/studyessay/tree/master/envoy/demo/proxy-demo)  
-
-> [线程模型的介绍](https://blog.envoyproxy.io/envoy-threading-model-a8d44b922310)  
+ 
 
 ### 相关Envoy资料
 
