@@ -38,8 +38,7 @@ Envoy设计初衷理念 ： The network should be transparent to applications. W
 
 > [参考Matt Klein写的文章(Announcing Envoy: C++ L7 proxy and communication bus)](https://eng.lyft.com/announcing-envoy-c-l7-proxy-and-communication-bus-92520b6c8191)  
 
-3、当Envoy正式成立开源之后，大量Google的开发人员参与为Envoy开源推广添砖加瓦，不久Lyft和Google  
-联合推出了istio，很快也受到很多云原生大厂的喜爱，陆续的其他开源社区大佬都加入到了Envoy开源社区，国内蚂蚁金服的云原生布道者Jimmy Song为Envoy文档提供了中文版文档，在这里感谢这些大佬，使得我们接下来了解和学习Envoy、ServerMesh有了一个良好的环境。    
+3、当Envoy正式成立开源之后，大量Google的开发人员参与为Envoy开源推广添砖加瓦，不久Lyft和Google联合推出了istio，很快也受到很多云原生大厂的喜爱，陆续的其他开源社区大佬都加入到了Envoy开源社区，国内蚂蚁金服的云原生布道者Jimmy Song为Envoy文档提供了中文版文档，在这里感谢这些大佬，使得我们接下来了解和学习Envoy、ServerMesh有了一个良好的环境。    
 
 4、Matt Klein 并没有与微服物布道者(克里斯-理查森)一样开设公司专职于Envoy推广，反而崇尚开源精神，完全交给开源社区，并与开源社区一起努力推广Envoy，本人也是非常倾佩这样行为（确实Envoy的成功可以为他增加很多用他的词汇就是更多的货币收入），相信开源社区。  
 
