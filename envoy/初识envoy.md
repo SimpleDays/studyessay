@@ -3,7 +3,7 @@ title: 初识Envoy
 date: 2020-05-20 21:46:00
 tags: Envoy
 author: 小笼包
-categories: servermesh
+categories: ServiceMesh
 ---
 
 ## 初识Envoy
