@@ -31,10 +31,7 @@ Envoy设计初衷理念 ： The network should be transparent to applications. W
 
 > [Matt Klein的推特](https://twitter.com/mattklein123)
 
-2、Envoy在开源成立前，由Lyft公司研发与使用大概长达1.5年时间，主要想解决Lyft公司零星  
-的网络和服务调用失败的持续问题，以至于大多数开发人员都不敢在关键路径上进行大量的服务  
-调用。难以理解问题发生在何处，最终Lyft公司还通过Envoy替代了基础架构中对Amazon的ELB  
-使用。  
+2、Envoy在开源成立前，由Lyft公司研发与使用大概长达1.5年时间，主要想解决Lyft公司零星的网络和服务调用失败的持续问题，以至于大多数开发人员都不敢在关键路径上进行大量的服务调用。难以理解问题发生在何处，最终Lyft公司还通过Envoy替代了基础架构中对Amazon的ELB使用。  
 
 > [参考Matt Klein写的文章(Announcing Envoy: C++ L7 proxy and communication bus)](https://eng.lyft.com/announcing-envoy-c-l7-proxy-and-communication-bus-92520b6c8191)  
 
