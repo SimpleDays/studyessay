@@ -35,6 +35,8 @@ categories: Kubernetes
 
 - 软性条件，属于偏好部署(优先匹配原则)
 
+<!-- more -->
+
 ## nodeSelector
 
 nodeSelector 是节点选择约束的最简单推荐形式。nodeSelector 是 PodSpec 的一个字段。它指定键值对的映射。为了使 pod 可以在节点上运行，节点必须具有每个指定的键值对作为标签（它也可以具有其他标签）。最常用的是一对键值对。  
