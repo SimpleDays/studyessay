@@ -238,6 +238,8 @@ nodeName 是节点选择约束的最简单方法，但是由于其自身限制�
 
 - 云环境中的节点名称并非总是可预测或稳定的。  
 
+## nodeAffinity、podAffinity、podAnitAffinity策略比较
+
 | 调度策略 | 匹配标签 | 操作符 | 拓扑域支持 | 调度目标 |
 | -------- | -------- | -------- | -------- | -------- |
 | nodeAffinity     | 主机     | In, NotIn, Exists, DoesNotExist, Gt, Lt     |  否   | 指定主机     |
