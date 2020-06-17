@@ -53,7 +53,11 @@ monitoring        Active        183d
 Error from server (Conflict): Operation cannot be fulfilled on namespaces "f5": The system is ensuring all content is removed from this namespace.  Upon completion, this namespace will automatically be purged by the system.
 ```
 
-错误大概意思就是：“服务器错误（冲突）：无法在名称空间“f5”上实现操作：系统正在确保从此名称空间中删除所有内容。 完成后，系统将自动清除此命名空间。”，也就是让我等待系统等资源清理完毕之后才会自动删除，可是我已经确认已经删除完了，这时候我又查了资料尝试使用强制删除这个命名空间：  
+错误大概意思就是：
+
+>服务器错误（冲突）：无法在名称空间“f5”上实现操作：系统正在确保从此名称空间中删除所有内容。 完成后，系统将自动清除此命名空间。
+
+也就是让我等待系统等资源清理完毕之后才会自动删除，可是我已经确认已经删除完了，这时候我又查了资料尝试使用强制删除这个命名空间：  
 
 ``` shell
 [root@sy-suz-srv91 ~]# kubectl delete ns f5 --force --grace-period=0
