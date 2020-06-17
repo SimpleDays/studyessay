@@ -44,7 +44,7 @@ message Person {
       string name = 1;
       int32 id = 2;
       bool has_ponycopter = 3;
-    }
+}
 ```
 
 然后，一旦您指定了数据结构，就可以使用ProtoBuf的编译器protoc从原型定义中以首选语言生成数据访问类。这些为每个字段（例如name()和）提供了简单的访问器set\_name()，以及将整个结构序列化为原始字节或从原始字节中解析出整个结构的方法。因此，例如，如果您选择的语言是C ++，则在上面的示例中运行编译器将生成一个名为Person的类。然后，您可以在应用程序中使用此类来填充，序列化和检索Person协议缓冲区消息。
@@ -52,13 +52,13 @@ message Person {
 您可以在普通的原始文件中定义gRPC服务，并使用RPC方法参数和返回类型指定为ProtoBuf的消息：
 
 ``` shell
-    // The greeter service definition.
-    service Greeter {
-        // Sends a greeting
-        rpc SayHello (HelloRequest) returns (HelloReply) {}
-    }
+// The greeter service definition.
+service Greeter {
+    // Sends a greeting
+    rpc SayHello (HelloRequest) returns (HelloReply) {}
+}
 
-    // The request message containing the user's name.message HelloRequest {  string name = 1;}
+// The request message containing the user's name.message HelloRequest {  string name = 1;}
 ```  
 
 gRPC protoc与特殊的gRPC插件一起使用，可从您的原型文件生成代码：您将生成生成的gRPC客户端和服务器代码，以及用于填充，序列化和检索消息类型的常规协议缓冲区代码。
