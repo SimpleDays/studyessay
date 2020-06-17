@@ -9,7 +9,7 @@ categories: Kubernetes
 ## Kubernetes删除状态为Terminating的命名空间
 
 > 作者: 小笼包  
-> 2020-06-07 有雨
+> 2020-06-17 有雨
 
 ## 前言
 
