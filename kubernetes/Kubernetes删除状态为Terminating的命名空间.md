@@ -156,7 +156,7 @@ monitoring        Active   183d
 
 通过以上的方式可以有效删除K8s下僵死的命名空间。
 
-参考文档：
+参考文档：  
 1、<https://copyfuture.com/blogs-details/20191021202129836irvun8sxdavssr3>  
 2、<https://www.cnblogs.com/wangxu01/articles/11792908.html>  
 3、<https://blog.csdn.net/tongzidane/article/details/88988542>  
