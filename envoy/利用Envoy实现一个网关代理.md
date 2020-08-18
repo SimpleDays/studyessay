@@ -45,4 +45,4 @@ categories: ServiceMesh
 
 1、令牌桶  
 
-
+![tokenbuket](./diagram/tokenbuket.drawio.png)
