@@ -11,7 +11,7 @@ Active Internet connections (w/o servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State
 tcp        0      0 k8sdev.sui:sun-sr-https k8sdev.dev.com.:34880 SYN_RECV
 tcp        0      0 k8sdev.dev.com.c:2379 10.1.62.21:47910        ESTABLISHED
-tcp        0      0 k8sdev.suiyi.com.c:2379 k8sdev.dev.com.:37790 ESTABLISHED
+tcp        0      0 k8sdev.dev.com.c:2379 k8sdev.dev.com.:37790 ESTABLISHED
 tcp        0      0 sy-suz-srv:pcsync-https 10.1.62.162:49200       ESTABLISHED
 tcp        0      0 k8sdev.dev.com.:52866 k8sdev.sui:sun-sr-https ESTABLISHED
 tcp        0      0 k8sdev.dev.com.:37728 k8sdev.dev.com.c:2379 ESTABLISHED
