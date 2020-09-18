@@ -9,18 +9,18 @@
 [root@sy-suz-srv51 ~]# netstat
 Active Internet connections (w/o servers)
 Proto Recv-Q Send-Q Local Address           Foreign Address         State
-tcp        0      0 k8sdev.sui:sun-sr-https k8sdev.suiyi.com.:34880 SYN_RECV
-tcp        0      0 k8sdev.suiyi.com.c:2379 10.1.62.21:47910        ESTABLISHED
-tcp        0      0 k8sdev.suiyi.com.c:2379 k8sdev.suiyi.com.:37790 ESTABLISHED
+tcp        0      0 k8sdev.sui:sun-sr-https k8sdev.dev.com.:34880 SYN_RECV
+tcp        0      0 k8sdev.dev.com.c:2379 10.1.62.21:47910        ESTABLISHED
+tcp        0      0 k8sdev.suiyi.com.c:2379 k8sdev.dev.com.:37790 ESTABLISHED
 tcp        0      0 sy-suz-srv:pcsync-https 10.1.62.162:49200       ESTABLISHED
-tcp        0      0 k8sdev.suiyi.com.:52866 k8sdev.sui:sun-sr-https ESTABLISHED
-tcp        0      0 k8sdev.suiyi.com.:37728 k8sdev.suiyi.com.c:2379 ESTABLISHED
-tcp        0      0 k8sdev.sui:sun-sr-https k8sdev.suiyi.com.:52852 ESTABLISHED
+tcp        0      0 k8sdev.dev.com.:52866 k8sdev.sui:sun-sr-https ESTABLISHED
+tcp        0      0 k8sdev.dev.com.:37728 k8sdev.dev.com.c:2379 ESTABLISHED
+tcp        0      0 k8sdev.sui:sun-sr-https k8sdev.dev.com.:52852 ESTABLISHED
 tcp        0      0 k8sdev.sui:sun-sr-https 10.1.62.162:32841       ESTABLISHED
 tcp        0      0 sy-suz-srv:pcsync-https sy-suz-srv51:60094      ESTABLISHED
 tcp        0      0 localhost:webcache      localhost:40136         ESTABLISHED
-tcp        0      0 k8sdev.suiyi.com.:35466 10.1.62.21:sun-sr-https ESTABLISHED
-tcp        0      0 k8sdev.suiyi.com.:34358 10.1.62.21:sun-sr-https ESTABLISHED
+tcp        0      0 k8sdev.dev.com.:35466 10.1.62.21:sun-sr-https ESTABLISHED
+tcp        0      0 k8sdev.dev.com.:34358 10.1.62.21:sun-sr-https ESTABLISHED
 Active UNIX domain sockets (w/o servers)
 Proto RefCnt Flags       Type       State         I-Node   Path
 unix  3      [ ]         DGRAM                    18442    /run/systemd/notify
