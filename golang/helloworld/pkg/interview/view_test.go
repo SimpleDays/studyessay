@@ -1,7 +1,7 @@
 /**
  * @Author: XiaoLongBao
- * @Description: OOP的面试题目
- * @File:  oop
+ * @Description: 面试题目
+ * @File:  view_test
  * @Program: helloworld
  * @Date: 2021-04-28 15:54
  */
@@ -9,7 +9,9 @@ package interview
 
 import (
 	"fmt"
+	"sync"
 	"testing"
+	"time"
 )
 
 type People struct{}
@@ -152,4 +154,91 @@ func TestChar(t *testing.T) {
 
 /*
 golang char的简单理解
+*/
+
+type UserAage struct {
+	ages map[string]int
+	sync.Mutex
+}
+
+func (u *UserAage) Add(name string, age int) {
+	u.Lock()
+
+	defer u.Unlock()
+
+	u.ages[name] = age
+}
+
+func (u *UserAage) Get(name string) int {
+	if age, ok := u.ages[name]; ok {
+		return age
+	}
+
+	return -1
+}
+
+func TestMapThreadSafe(t *testing.T) {
+	u := &UserAage{
+		ages: make(map[string]int),
+	}
+	go u.Add("aa", 333)
+
+	go func(t *testing.T) {
+		defer func() { //defer就是把匿名函数压入到defer栈中，等到执行完毕后或者发生异常后调用匿名函数
+			err := recover() //recover是内置函数，可以捕获到异常
+			if err != nil {  //说明有错误
+				fmt.Println("err=", err)
+				//当然这里可以把错误的详细位置发送给开发人员
+				//send email to admin
+			}
+		}()
+
+		age := u.Get("aa")
+		t.Log(age)
+	}(t)
+
+	time.Sleep(100 * time.Hour)
+}
+
+/*
+可能会出现fatal error: concurrent map read and map write
+*/
+
+type threadSafeSet struct {
+	sync.RWMutex
+	s []interface{}
+}
+
+func (set *threadSafeSet) Iter() <-chan interface{} {
+	ch := make(chan interface{}, len(set.s))
+	go func() {
+		set.RLock()
+		for elem, v := range set.s {
+			ch <- elem
+			println("Iter", elem, v)
+		}
+		close(ch)
+		set.RUnlock()
+	}()
+	return ch
+}
+
+func TestIter(t *testing.T) {
+	th := &threadSafeSet{
+		s: []interface{}{
+			"1", "2",
+		},
+	}
+
+	v := <-th.Iter()
+	fmt.Sprintf("%s%v", "ch", v)
+	// time.Sleep(100 * time.Hour)
+}
+
+/*
+看到这道题，我也在猜想出题者的意图在哪里。
+chan?sync.RWMutex?go?chan缓存池?迭代?
+所以只能再读一次题目，就从迭代入手看看。
+既然是迭代就会要求set.s全部可以遍历一次。
+但是chan是为缓存的，那就代表这写入一次就会阻塞。
 */
