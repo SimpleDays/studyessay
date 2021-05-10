@@ -25,7 +25,7 @@ func init() {
 
 	rss = append(rss, []int{0, 1, 2})
 
-	rss = append(rss, []int{0, 4, 5})
+	rss = append(rss, []int{0, 4})
 
 	rss = append(rss, []int{5, 6})
 
@@ -49,27 +49,23 @@ func EliminatedServers(list []int) []int {
 func UnionToMap() map[int][]int {
 	unionMap := make(map[int][]int)
 
-	rsLen := len(relationServers)
+	for i := 0; i < len(relationServers); i++ {
+		y := relationServers[i]
 
-	relations := make(map[int][]int)
-
-	for i := 0; i < rsLen; i++ {
-		rss := relationServers[i]
-
-		relations[i] = append(relations[i], []int{i}...)
-
-		for j := i + 1; j < len(rss); j++ {
-			y := rss[j]
-
-			ok := hasRelation(y)
-
-			if ok {
-				relations[i] = append(relations[i])
+		for j := 0; j < len(y); j++ {
+			s := y[j]
+			um := unionMap[s]
+			if um == nil {
+				unionMap[s] = append(unionMap[s], y...)
+			} else {
+				for _, vv := range um {
+					unionMap[vv] = append(unionMap[vv], y...)
+				}
 			}
 		}
 	}
 
-	fmt.Println(relations)
+	fmt.Println(unionMap)
 	return unionMap
 }
 
