@@ -15,7 +15,6 @@ categories: windows
 
 在之前介绍过了windows10如何安装wsl，这次介绍基于wsl1升级新的更稳定、更兼容的子系统wsl2。
 
-
 ## 二、安装步骤
 
 ### 1、检查当前windows10版本，因wsl2安装对win10系统版本有所要求
