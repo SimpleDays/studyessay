@@ -31,3 +31,10 @@
 
 `git checkout -b v1.0.0 origin/v1.0.0`
 
+### 5. 本地修改代码回滚
+
+获取提交日志的commitid
+> git log --pretty=oneline
+
+通过reset命令，根据commitid来进行回滚指定的版本库
+> git reset --hard <commit_id>
