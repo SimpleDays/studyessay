@@ -1,22 +1,27 @@
 # Git-分支创建、拉取、切换
-***
-#### 查看本地分支
+
+## 查看本地分支
+
 `git branch`
 
-#### 查看本地与远程分支
+## 查看本地与远程分支
+
 `git branch -a`
 
-### 1. 创建本地分支
+## 1. 创建本地分支
+
 > git branch [分支名称]
 
 `git branch v1.0.0`
 
-### 2. 创建远程分支/推送远程分支
+## 2. 创建远程分支/推送远程分支
+
 > git push --set-upstream origin [分支名]
 
 `git push --set-upstream origin v1.0.0`
 
-### 3. 删除本地分支
+## 3. 删除本地分支
+
 > git branch -d [本地分支名称]
 
 `git branch -d v1.0.0`
@@ -26,15 +31,16 @@
 
 `git push origin -d v1.0.0`
 
-### 4. 拉取远程分支
+## 4. 拉取远程分支
+
 > git checkout -b [本地分支名称] [远程分支名称]
 
 `git checkout -b v1.0.0 origin/v1.0.0`
 
-### 5. 本地修改代码回滚
+## 5. 本地修改代码回滚
 
-获取提交日志的commitid
+1、获取提交日志的commitid
 > git log --pretty=oneline
 
-通过reset命令，根据commitid来进行回滚指定的版本库
+2、通过reset命令，根据commitid来进行回滚指定的版本库
 > git reset --hard <commit_id>
