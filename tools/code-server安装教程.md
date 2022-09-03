@@ -133,7 +133,7 @@ $abc: ssh-keygen -t rsa -C "example@email.com"
 #### 1、下载golang的sdk并配置环境变量
 
 在[golang的中文社区](https://studygolang.com/dl)网站中下载自己需要的sdk版本，
-比如最新的1.9的下载地址：<https://studygolang.com/dl/golang/go1.19.linux-amd64.tar.gz>
+比如最新的1.19的下载地址：<https://studygolang.com/dl/golang/go1.19.linux-amd64.tar.gz>
 
 ``` shell
 $abc: wget -O ${想要下载的位置，例如：/config/download/} https://studygolang.com/dl/golang/go1.19.linux-amd64.tar.gz
