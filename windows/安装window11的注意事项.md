@@ -36,7 +36,7 @@ categories: windows
 
 然后关闭注册表和命令行窗口，点击回上一步操作，继续下一步安装即可正常安装完成window11了。
 
-至于怎么激活windows11这里就不描述了，自行百度去，建议不要用小马哥的里面流浪软件太多。
+至于怎么激活windows11这里就不描述了，自行百度去，建议不要用小马哥的里面流氓软件太多。
 
 ## 好用的windows基本软件推荐
 
@@ -49,5 +49,3 @@ categories: windows
 ## N卡的GeForce下载地址
 
 <https://www.nvidia.cn/geforce/geforce-experience/>
-
-
