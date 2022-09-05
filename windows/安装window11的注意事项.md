@@ -19,6 +19,8 @@ categories: windows
 
 重启，bois设置u盘第一启动，然后选择安装，这时候会可能会出现，如下问题描述：
 
+<!-- more -->
+
 ``` shell
 这台电脑无法运行windows 11
 
