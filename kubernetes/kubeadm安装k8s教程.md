@@ -16,3 +16,9 @@ categories: Kubernetes
 
 3、安装dashboard说明
 参考地址 <https://github.com/sskcal/kubernetes/tree/main/dashboard>
+
+4、生成yaml模版，通过create命令
+kubectl create deployment web --image-nginx -o yaml --dry-run
+
+5、更具已有的deployment的信息快速生成yaml文件并到处成yaml类型的文件
+kubectl get deploy nginx -o=yaml --export > nginx-demo.yaml
