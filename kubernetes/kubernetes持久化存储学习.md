@@ -57,6 +57,8 @@ root      1608     2  0 15:49 ?        00:00:00 [nfsd]
 root      1609     2  0 15:49 ?        00:00:00 [nfsd]
 root      1622  1304  0 15:49 pts/0    00:00:00 grep --color=auto nfs
 [root@localhost ~]# 
+# 开机启动nfs服务
+[root@localhost ~]# systemctl enable nfs
 ```
 
 ### 4、配置应用挂在nfs存储
