@@ -21,6 +21,8 @@ categories: Kubernetes
 [root@localhost dongliang]# yum install -y nfs-utils
 ```
 
+<!-- more -->
+
 ### 2、设置挂载路径
 
 ```shell
