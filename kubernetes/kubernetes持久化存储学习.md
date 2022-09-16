@@ -144,7 +144,7 @@ PV是持久化存储， 对存储资源的抽象，对外提供可以调用的�
 
 ### PV与PVC的实现流程
 
-![如图](./diagram/k8s-pv%26pvc.dio)
+![如图](./images/k8s-pv%26pvc.dio.png)
 
 ### 简单实现一个基本的PV和PVC存储
 
