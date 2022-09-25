@@ -82,6 +82,27 @@ func TestDeferFunc(t *testing.T) {
 	b = 1
 }
 
+func TestDeferFunc2(t *testing.T) {
+	t.Log("main", inc(t))
+}
+
+func inc(t *testing.T) int {
+	test := &test{num: 0}
+	defer test.Inc(3, t).Inc(2, t).Inc(1, t)
+	t.Log("inc", test.num)
+	return test.num
+}
+
+type test struct {
+	num int
+}
+
+func (test *test) Inc(flag int, t *testing.T) *test {
+	test.num++
+	t.Log("test", flag, test.num)
+	return test
+}
+
 /*
 虽然defer是后进先出，但是defer里面函数 "calc" 优先从上到下运行。
 第一个defer里面的calc函数执行结果打印
