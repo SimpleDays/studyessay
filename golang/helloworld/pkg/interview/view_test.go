@@ -252,8 +252,8 @@ func TestIter(t *testing.T) {
 	}
 
 	v := <-th.Iter()
-	fmt.Sprintf("%s%v", "ch", v)
-	// time.Sleep(100 * time.Hour)
+
+	t.Logf("%s: %v", "ch", v)
 }
 
 /*
