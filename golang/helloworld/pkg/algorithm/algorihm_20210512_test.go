@@ -134,3 +134,35 @@ func TestAbc(t *testing.T) {
 	fmt.Println("")
 	fmt.Println("over")
 }
+
+func TestChannelWithBuffer(t *testing.T) {
+	ch := make(chan int, 1)
+	sw := sync.WaitGroup{}
+
+	sw.Add(10)
+
+	go func() {
+		for i := 0; i < 10; i++ {
+			if i%2 == 0 {
+				t.Log("go 1", i)
+				sw.Done()
+				ch <- i
+				<-ch
+			}
+
+		}
+	}()
+
+	go func() {
+		for i := 0; i < 10; i++ {
+			if i%2 > 0 {
+				<-ch
+				t.Log("go 2", i)
+				sw.Done()
+				ch <- i
+			}
+		}
+	}()
+
+	sw.Wait()
+}

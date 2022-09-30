@@ -69,36 +69,36 @@ func UnionToMap() map[int][]int {
 	return unionMap
 }
 
-func hasRelation(y int, rrs []int) (bool, []int) {
+// func hasRelation(y int, rrs []int) (bool, []int) {
 
-	flag := false
-	r := make([]int, 0)
+// 	flag := false
+// 	r := make([]int, 0)
 
-	for index, rss := range relationServers {
-		for _, rs := range rss {
-			if rs == y {
-				if rrs == nil || len(rrs) == 0 {
-					flag = true
-					r = append(r, index)
-				} else {
-					var f = true
-					for _, c := range rrs {
-						if index == c {
-							f = false
-							break
-						}
-					}
+// 	for index, rss := range relationServers {
+// 		for _, rs := range rss {
+// 			if rs == y {
+// 				if rrs == nil || len(rrs) == 0 {
+// 					flag = true
+// 					r = append(r, index)
+// 				} else {
+// 					var f = true
+// 					for _, c := range rrs {
+// 						if index == c {
+// 							f = false
+// 							break
+// 						}
+// 					}
 
-					if f {
-						flag = true
-						rrs = append(rrs, index)
-						r = rrs
-					}
-				}
-				break
-			}
-		}
-	}
+// 					if f {
+// 						flag = true
+// 						rrs = append(rrs, index)
+// 						r = rrs
+// 					}
+// 				}
+// 				break
+// 			}
+// 		}
+// 	}
 
-	return flag, r
-}
+// 	return flag, r
+// }
