@@ -2,7 +2,7 @@
  * @Author: dongliang 342479980@qq.com
  * @Date: 2022-10-09 19:16:12
  * @LastEditors: dongliang 342479980@qq.com
- * @LastEditTime: 2022-10-09 19:45:27
+ * @LastEditTime: 2022-10-09 19:48:24
  * @FilePath: /helloworld/pkg/algorithm/sort_test.go
  * @Description: 排序算法记录
  */
@@ -25,10 +25,14 @@ func TestSelectSort(t *testing.T) {
 			}
 		}
 
-		tmp := intArray[i]
-		intArray[i] = intArray[minIndex]
-		intArray[minIndex] = tmp
+		swap(intArray, i, minIndex)
 	}
 
 	t.Log(intArray)
+}
+
+func swap(intArray []int, i int, j int) {
+	tmp := intArray[i]
+	intArray[i] = intArray[j]
+	intArray[j] = tmp
 }
