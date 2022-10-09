@@ -2,7 +2,7 @@
  * @Author: dongliang 342479980@qq.com
  * @Date: 2022-10-09 19:16:12
  * @LastEditors: dongliang 342479980@qq.com
- * @LastEditTime: 2022-10-09 23:05:22
+ * @LastEditTime: 2022-10-10 00:57:28
  * @FilePath: /helloworld/pkg/algorithm/sort_test.go
  * @Description: 排序算法记录
  */
@@ -33,4 +33,57 @@ func TestBubbleSort(t *testing.T) {
 	BubbleSort(intArray)
 
 	t.Log(intArray)
+}
+
+// 插入排序
+// 原理：在已排序序列中从后向前扫描，找到相应位置并插入。0~0， 0~1，。。。。。。0~N-1
+// 时间复杂度 O(N²)
+// 空间复杂度O(1)
+func TestInsertionSort(t *testing.T) {
+	intArray := []int{3, 6, 99, 1, 2, 0, 55, 789, 333, 21, 2, 6, 1234, 66}
+
+	InsertionSort(intArray)
+
+	t.Log(intArray)
+}
+
+// 算法题： 从一个int数组中找出一种数是出现奇数次，其他都是出现偶数次，要求时间复杂度O(N), 空间复杂度O(1)
+func TestOnlyOddNumber(t *testing.T) {
+	intArray := []int{2, 1, 3, 1, 3, 1, 3, 2, 1}
+
+	eor := 0
+
+	for _, num := range intArray {
+		eor = eor ^ num
+	}
+
+	t.Logf("出现奇数次的数是: %v", eor)
+}
+
+// 算法题： 从一个int数组中找出二种数是出现奇数次，其他都是出现偶数次，要求时间复杂度O(N), 空间复杂度O(1)
+func TestTowTimesOddNumber(t *testing.T) {
+	intArray := []int{2, 1, 3, 1, 3, 1, 3, 2, 1, 6}
+
+	eor := 0
+
+	for _, num := range intArray {
+		eor = eor ^ num
+	}
+
+	// eor = a^b
+	// eor != 0
+	// eor必然有一个位置上是1
+
+	rightOne := eor & (^eor + 1) // 提取出最右的1  eor 与 eor取反 加 1
+
+	onlyOne := 0 // eor'
+
+	for _, num := range intArray {
+		if num&rightOne == 1 {
+			onlyOne = onlyOne ^ num
+		}
+	}
+
+	t.Logf("出现二种数是奇数次的分别是：%v 和 %v", onlyOne, (eor ^ onlyOne))
+
 }

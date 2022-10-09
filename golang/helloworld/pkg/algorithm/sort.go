@@ -51,3 +51,30 @@ func BubbleSort(intArray []int) {
 		}
 	}
 }
+
+// 插入排序
+// 原理：在已排序序列中从后向前扫描，找到相应位置并插入。0~0， 0~1，。。。。。。0~N-1
+// 时间复杂度 O(N²)
+// 空间复杂度O(1)
+func InsertionSort(intArray []int) {
+
+	if len(intArray) == 0 {
+		return
+	}
+
+	for i := 1; i < len(intArray); i++ {
+		// for j := i - 1; j >= 0 && intArray[j] > intArray[j+1]; j-- {
+		// 	intArray[j] = intArray[j] ^ intArray[j+1]
+		// 	intArray[j+1] = intArray[j] ^ intArray[j+1]
+		// 	intArray[j] = intArray[j] ^ intArray[j+1]
+		// }
+
+		for j := i - 1; j >= 0; j-- {
+			if intArray[j] > intArray[j+1] {
+				intArray[j] = intArray[j] ^ intArray[j+1]
+				intArray[j+1] = intArray[j] ^ intArray[j+1]
+				intArray[j] = intArray[j] ^ intArray[j+1]
+			}
+		}
+	}
+}
