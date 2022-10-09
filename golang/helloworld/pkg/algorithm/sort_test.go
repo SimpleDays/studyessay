@@ -2,7 +2,7 @@
  * @Author: dongliang 342479980@qq.com
  * @Date: 2022-10-09 19:16:12
  * @LastEditors: dongliang 342479980@qq.com
- * @LastEditTime: 2022-10-09 19:48:24
+ * @LastEditTime: 2022-10-09 22:45:59
  * @FilePath: /helloworld/pkg/algorithm/sort_test.go
  * @Description: 排序算法记录
  */
@@ -16,23 +16,19 @@ import "testing"
 func TestSelectSort(t *testing.T) {
 	intArray := []int{3, 6, 99, 1, 2, 0, 55, 789, 321, 21, 2, 6}
 
-	for i := 0; i < len(intArray)-1; i++ { //i ~ N-1
-		minIndex := i
-
-		for j := i + 1; j < len(intArray); j++ { // i+1 ~ N 找到比当前位置更小的数的索引位
-			if intArray[j] < intArray[minIndex] {
-				minIndex = j
-			}
-		}
-
-		swap(intArray, i, minIndex)
-	}
+	SelectSort(intArray)
 
 	t.Log(intArray)
 }
 
-func swap(intArray []int, i int, j int) {
-	tmp := intArray[i]
-	intArray[i] = intArray[j]
-	intArray[j] = tmp
+// 冒泡排序
+// 原理： 比较相邻的元素。如果第一个比第二个大，就交换他们两个。
+// 对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。
+// 时间复杂度 O(N²)
+func TestBubbleSort(t *testing.T) {
+	intArray := []int{3, 6, 99, 1, 2, 0, 55, 789, 333, 21, 2, 6, 12345}
+
+	BubbleSort(intArray)
+
+	t.Log(intArray)
 }
