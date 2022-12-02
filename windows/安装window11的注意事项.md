@@ -45,6 +45,7 @@ categories: windows
 - PotPlayer视频软件
 - geek卸载助手
 - GamePP游戏助手
+- 硬件狗狗（一款可以跑分和监控硬件温度的工具）
 - Mem Reduct <https://www.henrypp.org/product/memreduct> 清理内存的小工具
 
 ## N卡的GeForce下载地址
